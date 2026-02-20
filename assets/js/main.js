@@ -24,6 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.classList.remove('active');
     });
 
+    // Dropdown Toggle
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+        });
+    });
+
     // Hero Slider
     const slides = document.querySelectorAll('.hero-slide');
     let currentSlide = 0;
