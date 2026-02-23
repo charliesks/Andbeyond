@@ -36,19 +36,60 @@
         </div>
     </header>
     <main>
-        <section class="hero" style="height: 40vh;"><div class="hero-overlay"></div><div class="container hero-container"><h1 class="hero-title">Contact Us</h1></div></section>
-        <section class="contact" style="padding: 100px 0;">
+
+        <section class="contact-section">
             <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-col">
-                        <h4>Beirut Office</h4>
-                        <p>Beirut, Lebanon</p>
-                        <p>Email: info@andbeyondmena.com</p>
+                <div class="contact-grid">
+                    <!-- Contact Form Col -->
+                    <div class="contact-info-col reveal">
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Get In Touch</h2>
+                        <div class="contact-form-card">
+                            <form action="#" class="contact-form" id="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-gold" style="width: 100%;">Send Message</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="footer-col">
-                        <h4>Riyadh Office</h4>
-                        <p>Riyadh, KSA</p>
-                        <p>Phone: +966 50 123 4567</p>
+
+                    <!-- Offices Col -->
+                    <div class="contact-info-col reveal">
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Our Offices</h2>
+                        <div class="office-info-grid">
+                            <div class="office-card">
+                                <h4>Beirut Office</h4>
+                                <p>Beirut, Lebanon</p>
+                                <p>Email: info@andbeyondmena.com</p>
+                            </div>
+                            <div class="office-card">
+                                <h4>Riyadh Office</h4>
+                                <p>Riyadh, KSA</p>
+                                <p>Phone: +966 50 123 4567</p>
+                                <p>Email: ksa@andbeyondmena.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="map-container" id="map-beirut">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106013.0645607374!2d35.43859664539659!3d33.88921136773343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f1721588229a7%3A0x94ef4003058097c5!2sBeirut%2C%20Lebanon!5e0!3m2!1sen!2slb!4v1700000000000!5m2!1sen!2slb" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                         <div class="map-container" id="map-riyadh" style="margin-top: 20px;">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231885.51860363248!2d46.486026909472654!3d24.75239088613459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d48939b%3A0x88a9648c03107538!2sRiyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1700000000000!5m2!1sen!2ssa" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,5 +138,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -90,9 +90,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.classList.add('counted');
                 animateCounters();
             }
+
         });
     }, { threshold: 0.5 });
 
     const statsSection = document.querySelector('.stats');
     if (statsSection) counterObserver.observe(statsSection);
+
+
+    // Contact Form handling
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+
+            // Simulate sending
+            setTimeout(() => {
+                submitBtn.innerText = 'Message Sent!';
+                submitBtn.style.background = '#4CAF50';
+                submitBtn.style.color = 'white';
+                
+                setTimeout(() => {
+                    contactForm.reset();
+                    submitBtn.innerText = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.style.color = '';
+                    submitBtn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+    }
 });
